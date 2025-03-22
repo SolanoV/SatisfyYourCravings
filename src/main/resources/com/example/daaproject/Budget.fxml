@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.daaproject.BudgetController">
+   <children>
+      <VBox fx:id="vBoxBudget" prefHeight="200.0" prefWidth="100.0" VBox.vgrow="ALWAYS">
+         <children>
+            <Label fx:id="titleLabel" prefHeight="72.0" prefWidth="1281.0" text="Satisfy Your Cravings">
+               <font>
+                  <Font size="23.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="40.0" />
+               </VBox.margin>
+            </Label>
+            <VBox prefHeight="451.0" prefWidth="1280.0">
+               <children>
+                  <Label fx:id="heading1" prefHeight="55.0" prefWidth="1288.0" text="To satisfy your Cravings:">
+                     <font>
+                        <Font size="38.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="100.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox prefHeight="100.0" prefWidth="641.0">
+                     <children>
+                        <Label fx:id="pesoSign" alignment="CENTER" prefHeight="39.0" prefWidth="19.0" text="₱">
+                           <HBox.margin>
+                              <Insets left="90.0" top="25.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="28.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="budgetField" prefHeight="43.0" prefWidth="281.0" promptText="Enter Your Budget">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" top="20.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Button fx:id="checkBudgetButton" mnemonicParsing="false" onAction="#checkBudget" prefHeight="43.0" prefWidth="72.0" text="▶">
+                           <HBox.margin>
+                              <Insets left="20.0" right="50.0" top="25.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <Label fx:id="budgetFeedback" alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="641.0" text="" wrapText="true">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="100.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <Button fx:id="retryExitButton" managed="false" mnemonicParsing="false" onAction="#handleRetryExit" prefHeight="43.0" prefWidth="200.0" text="Retry or Exit" visible="false">
+               <VBox.margin>
+                  <Insets left="100.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <VBox alignment="CENTER_LEFT" prefHeight="116.0" prefWidth="1280.0">
+               <children>
+                  <Button fx:id="budgetNext" alignment="CENTER" disable="true" mnemonicParsing="false" onAction="#switchToSortedCombinations" prefHeight="50.0" prefWidth="150.0" text="Next" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="60.0" left="100.0" top="10.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</VBox>

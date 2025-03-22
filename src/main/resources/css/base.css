@@ -1,0 +1,32 @@
+@import url("file:src/main/resources/css/base.css");
+
+@font-face {
+    font-family: 'Patriot Black';
+    src: url("file:src/main/resources/fonts/Patriot-Black.otf");
+}
+
+@font-face {
+    font-family: 'Relieve';
+    src: url("file:src/main/resources/fonts/Relieve.ttf");
+}
+
+@font-face{
+    font-family: 'Subjectivity Black';
+    src: url("file:src/main/resources/fonts/Subjectivity-Black.otf");
+}
+
+
+.root {
+    -fx-background-color: transparent;  /* Ensures the root VBox doesn’t block the ImageView */
+}
+
+VBox {
+    -fx-background-color: transparent;  /* Ensure all nested VBoxes are transparent */
+}
+
+#titleLabel {
+    -fx-font-family: 'Relieve Demo';
+    -fx-font-size: 50px;
+    -fx-text-fill: #FFFFFF;
+    -fx-padding: 0 0 0px 70px;
+}

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.daaproject.CreditsController">
+   <children>
+      <VBox prefHeight="718.0" prefWidth="1280.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="242.0" prefWidth="1280.0">
+               <children>
+                  <Label fx:id="thankYouLabel" text="Thank you!">
+                     <font>
+                        <Font size="59.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="programmerLabel" text="Programmers:">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <VBox alignment="CENTER" prefHeight="60.0" prefWidth="1280.0">
+                     <children>
+                        <Label fx:id="line1Label" alignment="CENTER" prefHeight="30.0" prefWidth="1287.0" text="   SOLANO, Vinz Eulo A.              CHING, Clark Lawrence T.">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="line2Label" alignment="CENTER" prefHeight="30.0" prefWidth="1291.0" text="OLA, Carl Geneson C.                 ORTIZ, Albert Julius D.">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets top="200.0" />
+               </VBox.margin>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Button fx:id="exitButton" mnemonicParsing="false" onAction="#exit" prefHeight="43.0" prefWidth="100.0" text="Exit">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</VBox>

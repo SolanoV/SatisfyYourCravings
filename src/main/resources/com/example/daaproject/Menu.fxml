@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.daaproject.MenuController">
+   <children>
+      <VBox prefHeight="719.0" prefWidth="1280.0">
+         <children>
+            <Label fx:id="titleLabel" prefHeight="72.0" prefWidth="1378.0" text="Satisfy Your Cravings" VBox.vgrow="ALWAYS">
+               <font>
+                  <Font size="23.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="40.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="heading1" prefHeight="56.0" prefWidth="1287.0" text="Please Choose Your Cravings:" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="39.0" />
+               </font>
+            </Label>
+            <HBox fx:id="hBox1" alignment="CENTER" prefHeight="387.0" prefWidth="1280.0" spacing="100.0">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="40.0" top="20.0" />
+               </padding>
+               <children>
+                  <VBox fx:id="hvBox1" prefHeight="300.0" prefWidth="300.0">
+                     <children>
+                        <Label fx:id="mainCourseTitle" text="Main Course/Rice Meals:" VBox.vgrow="ALWAYS">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox fx:id="mainCourseChoice" prefHeight="40.0" prefWidth="300.0" VBox.vgrow="ALWAYS" />
+                        <HBox fx:id="buttonhBox1" alignment="CENTER_RIGHT" spacing="10.0">
+                           <children>
+                              <Label fx:id="mainCourseCount" managed="false" text="0 Food Items Found" visible="false" />
+                              <Button fx:id="mainCourseToggle" onAction="#toggleMainCourseList" prefHeight="30.0" prefWidth="50.0" text="+" VBox.vgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <TableView fx:id="mainCourseTable" managed="false" prefHeight="150.0" prefWidth="300.0" visible="false" VBox.vgrow="ALWAYS">
+                           <columns>
+                              <TableColumn fx:id="mainCourseStallColumn" prefWidth="120.0" text="Stall">
+                                 <cellValueFactory>
+                                    <PropertyValueFactory property="stall" />
+                                 </cellValueFactory>
+                              </TableColumn>
+                              <TableColumn fx:id="mainCourseNameColumn" prefWidth="120.0" text="Food Item">
+                                 <cellValueFactory>
+                                    <PropertyValueFactory property="name" />
+                                 </cellValueFactory>
+                              </TableColumn>
+                              <TableColumn fx:id="mainCoursePriceColumn" prefWidth="60.0" text="Price">
+                                 <cellValueFactory>
+                                    <PropertyValueFactory property="price" />
+                                 </cellValueFactory>
+                              </TableColumn>
+                           </columns>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </TableView>
+                        <Label fx:id="mainCourseError" managed="false" style="-fx-text-fill: red;" text="Please choose an option before proceeding" visible="false">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin></Label>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="hvBox2" prefHeight="300.0" prefWidth="300.0">
+                     <children>
+                        <Label fx:id="dessertTitle" text="Snacks/Desserts:" VBox.vgrow="ALWAYS">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox fx:id="dessertChoice" prefHeight="40.0" prefWidth="300.0" />
+                        <HBox fx:id="buttonhBox2" alignment="CENTER_RIGHT" spacing="10.0">
+                           <children>
+                              <Label fx:id="dessertCount" managed="false" text="0 Food Items Found" visible="false" />
+                              <Button fx:id="dessertToggle" onAction="#toggleDessertList" prefHeight="30.0" prefWidth="50.0" text="+" VBox.vgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <TableView fx:id="dessertTable" managed="false" prefHeight="150.0" prefWidth="300.0" visible="false" VBox.vgrow="ALWAYS">
+                           <columns>
+                              <TableColumn fx:id="dessertStallColumn" prefWidth="120.0" text="Stall">
+                                 <cellValueFactory>
+                                    <PropertyValueFactory property="stall" />
+                                 </cellValueFactory>
+                              </TableColumn>
+                              <TableColumn fx:id="dessertNameColumn" prefWidth="120.0" text="Food Item">
+                                 <cellValueFactory>
+                                    <PropertyValueFactory property="name" />
+                                 </cellValueFactory>
+                              </TableColumn>
+                              <TableColumn fx:id="dessertPriceColumn" prefWidth="60.0" text="Price">
+                                 <cellValueFactory>
+                                    <PropertyValueFactory property="price" />
+                                 </cellValueFactory>
+                              </TableColumn>
+                           </columns>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </TableView>
+                        <Label fx:id="dessertError" managed="false" style="-fx-text-fill: red;" text="Please choose an option before proceeding" visible="false">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin></Label>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="hvBox3" prefHeight="300.0" prefWidth="300.0">
+                     <children>
+                        <Label fx:id="drinkTitle" text="Drinks:" VBox.vgrow="ALWAYS">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox fx:id="drinkChoice" prefHeight="40.0" prefWidth="300.0" />
+                        <HBox fx:id="buttonhBox3" alignment="CENTER_RIGHT" spacing="10.0">
+                           <children>
+                              <Label fx:id="drinkCount" managed="false" text="0 Food Items Found" visible="false" />
+                              <Button fx:id="drinkToggle" onAction="#toggleDrinkList" prefHeight="30.0" prefWidth="50.0" text="+" VBox.vgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <TableView fx:id="drinkTable" managed="false" prefHeight="150.0" prefWidth="300.0" visible="false" VBox.vgrow="ALWAYS">
+                           <columns>
+                              <TableColumn fx:id="drinkStallColumn" prefWidth="120.0" text="Stall">
+                                 <cellValueFactory>
+                                    <PropertyValueFactory property="stall" />
+                                 </cellValueFactory>
+                              </TableColumn>
+                              <TableColumn fx:id="drinkNameColumn" prefWidth="120.0" text="Drink Item">
+                                 <cellValueFactory>
+                                    <PropertyValueFactory property="name" />
+                                 </cellValueFactory>
+                              </TableColumn>
+                              <TableColumn fx:id="drinkPriceColumn" prefWidth="60.0" text="Price">
+                                 <cellValueFactory>
+                                    <PropertyValueFactory property="price" />
+                                 </cellValueFactory>
+                              </TableColumn>
+                           </columns>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </TableView>
+                        <Label fx:id="drinkError" managed="false" style="-fx-text-fill: red;" text="Please choose an option before proceeding" visible="false">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin></Label>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <VBox alignment="CENTER_RIGHT" prefHeight="58.0" prefWidth="1280.0">
+               <children>
+                  <Button fx:id="menuNext" alignment="CENTER" mnemonicParsing="false" onAction="#switchToUnsortedCombinations" prefHeight="47.0" prefWidth="137.0" text="Next" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets right="75.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" top="30.0" />
+               </VBox.margin>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</VBox>

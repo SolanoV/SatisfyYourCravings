@@ -1,0 +1,72 @@
+@import url("file:src/main/resources/css/base.css");
+
+@font-face {
+    font-family: 'Patriot Black';
+    src: url("file:src/main/resources/fonts/Patriot-Black.otf");
+}
+
+@font-face {
+    font-family: 'Relieve';
+    src: url("file:src/main/resources/fonts/Relieve.ttf");
+}
+
+@font-face{
+    font-family: 'Subjectivity Black';
+    src: url("file:src/main/resources/fonts/Subjectivity-Black.otf");
+}
+
+#thankYouLabel {
+    -fx-font-family: 'Patriot Black';
+    -fx-font-size: 200px;
+    -fx-text-fill: #FFFFFF;
+    -fx-effect: dropshadow(gaussian, #ffbf00, 30, 0, 0, 0);
+}
+
+#programmerLabel{
+    -fx-font-family: 'Subjectivity Black';
+    -fx-text-fill: #FFFFFF;
+    -fx-effect: dropshadow(gaussian, #ffbf00, 10, 0, 0, 0);
+}
+
+#line1Label{
+    -fx-font-family: 'Subjectivity Black';
+    -fx-text-fill: #FFFFFF;
+    -fx-effect: dropshadow(gaussian, #ffbf00, 10, 0, 0, 0);
+}
+#line2Label{
+    -fx-font-family: 'Subjectivity Black';
+    -fx-text-fill: #FFFFFF;
+    -fx-effect: dropshadow(gaussian, #ffbf00, 10, 0, 0, 0);
+}
+
+#exitButton {
+    -fx-background-color: white;
+    -fx-font-family: "Subjectivity Black";
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 50px;
+    -fx-border-color: #F5A623;
+    -fx-border-width: 2px;
+    -fx-border-radius: 50px;
+    -fx-padding: 10px 20px 10px 15px; /* Adjusted padding to balance the play symbol */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 0, 2);
+    -fx-scale-x: 1.0;
+    -fx-scale-y: 1.0;
+    -fx-transition: -fx-background-color 0.3s, -fx-border-color 0.3s, -fx-scale-x 0.3s, -fx-scale-y 0.3s, -fx-effect 0.3s;
+}
+
+#exitButton:hover {
+    -fx-background-color: #F5A623;
+    -fx-border-color: white;
+    -fx-border-width: 2px;
+    -fx-border-radius: 50px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 10, 0, 0, 3);
+}
+
+#exitButton .label {
+    -fx-text-fill: #F5A623; /* Default text color for labels inside the button */
+}
+
+#exitButton:hover .label {
+    -fx-text-fill: white; /* Text color when hovered */
+}

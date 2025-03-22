@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.daaproject.FeedbackController">
+   <children>
+      <VBox fx:id="vBoxFeedback" prefHeight="722.0" prefWidth="1280.0">
+         <children>
+            <Label fx:id="titleLabel" prefHeight="72.0" prefWidth="1289.0" text="Satisfy Your Cravings">
+               <font>
+                  <Font size="23.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="40.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="heading1Label" prefHeight="72.0" prefWidth="1246.0" text="How satisfied are you?">
+               <font>
+                  <Font size="35.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+            </Label>
+            <HBox prefHeight="276.0" prefWidth="1280.0">
+               <children>
+                  <VBox prefHeight="276.0" prefWidth="688.0">
+                     <children>
+                        <Label fx:id="mainStallLabel" prefHeight="36.0" prefWidth="678.0" text="Name of Main Course Stall">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <HBox fx:id="mainStallRating" prefHeight="30.0" prefWidth="200.0">
+                           <VBox.margin>
+                              <Insets left="95.0" top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <Label fx:id="dessertStallLabel" prefHeight="36.0" prefWidth="698.0" text="Name of Dessert Stall">
+                           <VBox.margin>
+                              <Insets top="40.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <HBox fx:id="dessertStallRating" prefHeight="30.0" prefWidth="200.0">
+                           <VBox.margin>
+                              <Insets left="95.0" top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <Label fx:id="drinkStallLabel" prefHeight="36.0" prefWidth="654.0" text="Name of Drink Stall">
+                           <VBox.margin>
+                              <Insets top="40.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <HBox fx:id="drinkStallRating" prefHeight="30.0" prefWidth="200.0">
+                           <VBox.margin>
+                              <Insets left="95.0" top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <ImageView fitHeight="394.0" fitWidth="636.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </HBox>
+            <VBox alignment="CENTER_LEFT" prefHeight="67.0" prefWidth="1280.0">
+               <children>
+                  <Button fx:id="feedbackNext" alignment="CENTER" mnemonicParsing="false" onAction="#handleFeedbackNext" prefHeight="50.0" prefWidth="150.0" text="Next" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="75.0" right="5.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</VBox>
