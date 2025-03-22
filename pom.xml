@@ -18,12 +18,12 @@
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
-            <version>20.0.1</version>
+            <version>24</version>
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-fxml</artifactId>
-            <version>20.0.1</version>
+            <version>24</version>
         </dependency>
 
         <dependency>
@@ -49,6 +49,9 @@
                 <configuration>
                     <source>20</source>
                     <target>20</target>
+                    <compilerArgs>
+                        <arg>--enable-native-access=javafx.graphics</arg>
+                    </compilerArgs>
                 </configuration>
             </plugin>
             <plugin>
